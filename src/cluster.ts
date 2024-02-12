@@ -6,7 +6,7 @@ import process from 'node:process';
 
 config();
 const numCPUs = availableParallelism();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 if (cluster.isPrimary) {
   console.log(`Primary ${process.pid} is running`);
