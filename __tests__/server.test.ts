@@ -141,6 +141,8 @@ describe('Scenario 3: error handling with status code 404', () => {
     const res = await request.get(nonExistingEndpoint);
 
     expect(res.status).toBe(404);
-    expect(res.body).toEqual({ message: `API not found at ${nonExistingEndpoint}` });
+    expect(res.body).toEqual({
+      message: `API not found at ${nonExistingEndpoint}`,
+    });
   });
 });
